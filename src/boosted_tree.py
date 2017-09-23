@@ -270,7 +270,7 @@ def get_features(df):
     return df
 
 def MAE(y, ypred):
-    #logerror=log(Zestimate)−log(SalePrice)
+    #logerror=log(Zestimate)-log(SalePrice)
     return np.sum([abs(y[i]-ypred[i]) for i in range(len(y))]) / len(y)
 
 train = pd.merge(train, properties, how='left', on='parcelid')
